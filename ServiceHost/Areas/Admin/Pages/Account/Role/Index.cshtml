@@ -1,0 +1,78 @@
+﻿@page
+@using Microsoft.AspNetCore.Authorization
+@model ServiceHost.Areas.Admin.Pages.Account.Role.IndexModel
+
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["title"] = "مدیریت نقش ها";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="page-title pull-right">@ViewData["title"]</h4>
+        <p class="pull-left">
+            <a class="btn btn-success btn-rounded waves-effect m-b-5 btn-lg" asp-page="Create">ایجاد نقش جدید</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">  دسترسی ها: (@Model.Role.Count)</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <table id="datatable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>نام دسترسی</th>
+                                    <th>نام فارسی دسترسی</th>
+                                    <th>عملیات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Role.Select((data, index) => new { data, index = index + 1 }))
+                                {
+                                    <tr>
+                                        <td>@item.index</td>
+                                     
+                                        <td>@item.data.Name</td>
+                                        <td>@item.data.PersianName</td>
+                                        <td>
+                                            <a class="btn btn-warning btn-rounded btn-sm btn-block waves-effect m-b-5" asp-page="Edit" asp-route-id="@item.data.Id">
+                                                <i class="fa fa-edit"></i> ویرایش
+                                            </a>
+                                           @*  <a class="btn btn-info btn-rounded btn-sm btn-block waves-effect m-b-5" asp-page="AddUserToRole" asp-route-roleId="@item.data.Id">
+                                                <i class="fa fa-edit"></i> افزودن کاربر
+                                            </a> *@
+                                            <a class="btn btn-primary btn-rounded btn-sm btn-block waves-effect m-b-5"
+                                               asp-page="AssignUserToRole"
+                                               asp-route-roleId="@item.data.Id">
+                                                <i class="fa fa-user-plus"></i> افزودن کاربر به نقش
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/adminTheme/assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/adminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#datatable').dataTable();
+        });
+    </script>
+}

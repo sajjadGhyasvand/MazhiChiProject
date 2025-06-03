@@ -1,0 +1,93 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using My_ShopQuery.Contract.GeneralSetting
+@model IndexModel
+@inject IGeneralSettingQueryModel GeneralSetting
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["Title"];
+}
+@* @{
+    var general = GeneralSetting.GeneralSettingQueryModel();
+
+    ViewData["keywords"] = general.MetaKeywords;
+    ViewData["metaDescription"] = general.MetaDescription;
+} *@
+
+
+
+@*@await Component.InvokeAsync("Categories")
+
+@await Component.InvokeAsync("AboutUs")
+@await Component.InvokeAsync("LatestProduct")
+@await Component.InvokeAsync("LatestEvents")
+@await Component.InvokeAsync("LatestArticles")*@
+
+@await Component.InvokeAsync("Slider")
+@await Component.InvokeAsync("TimeLine")
+@await Component.InvokeAsync("AboutUs")
+@await Component.InvokeAsync("WhyChoose")
+@await Component.InvokeAsync("Categories")
+@await Component.InvokeAsync("LatestProduct")
+<!-- Start Video Section -->
+<div class="video-section">
+    <div class="container">
+        <div class="video-content">
+            <a href="https://www.youtube.com/watch?v=Z3OS4Bn0n-Q" class="video-btn popup-youtube">
+                <i class="fas fa-play"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- End Video Section -->
+<!-- Start Fun Facts Section -->
+<section class="fun-facts-area pb-100">
+    <div class="container">
+        <div class="fun-facts-content-area">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-fun-fact">
+                        <h3>
+                            <span class="odometer" data-count="120">00</span>
+                            <span class="sign-icon">+</span>
+                        </h3>
+                        <p>Category Vegetable</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-fun-fact">
+                        <h3>
+                            <span class="odometer" data-count="150">00</span>
+                            <span class="sign-icon">+</span>
+                        </h3>
+                        <p>Home Supplier</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-fun-fact">
+                        <h3>
+                            <span class="odometer" data-count="145">00</span>
+                            <span class="sign-icon">+</span>
+                        </h3>
+                        <p>Seasonal Vegetables</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-fun-fact">
+                        <h3>
+                            <span class="odometer" data-count="200">00</span>
+                            <span class="sign-icon">+</span>
+                        </h3>
+                        <p>Attended Event</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Fun Facts Section -->
+@await Component.InvokeAsync("LatestArticles")
+

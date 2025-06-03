@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ComplaintAndSatisfaction.Application.Contract\ComplaintAndSatisfaction.Application.Contract.csproj" />
+    <ProjectReference Include="..\ComplaintAndSatisfaction.Domain\ComplaintAndSatisfactionManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

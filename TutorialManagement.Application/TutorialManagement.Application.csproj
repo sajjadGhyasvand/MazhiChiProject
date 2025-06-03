@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TutorialManagement.Application.Contract\TutorialManagement.Application.Contract.csproj" />
+    <ProjectReference Include="..\TutorialManagement.Domain\TutorialManagement.Domain.csproj" />
+    <ProjectReference Include="..\TutorialManagement.Infrastructure.EfCore\TutorialManagement.Infrastructure.EfCore.csproj" />
+  </ItemGroup>
+</Project>

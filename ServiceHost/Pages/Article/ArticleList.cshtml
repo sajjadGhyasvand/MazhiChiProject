@@ -1,0 +1,557 @@
+﻿@page "/ArticleList"
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using My_ShopQuery.Contract.GeneralSetting
+@using System.Globalization
+@using My_Shop_Framework.Application
+@model ArticleCategoryModel
+@inject IGeneralSettingQueryModel GeneralSetting
+@inject IViewLocalizer Localizer
+ @{
+    var general = GeneralSetting.GeneralSettingQueryModel();
+    ViewData["Title"] = Localizer["Articles"];
+    ViewData["keywords"] = general.MetaKeywords;
+    ViewData["metaDescription"] = general.MetaDescription;
+} 
+
+ <!-- Start Page Title Area -->
+        <div class="page-title-area">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="page-title-content">
+                            <h2>News Right Sidebar</h2>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li>News Right Sidebar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Title Area -->
+
+        <!-- Start Blog Section -->
+        <section class="blog-section ptb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/4.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Trifles for tech, 22 January</span>
+                                        <h3>Innovating with Autodesk my Trifles Partnership Adds</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/5.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Woman for Trifles, August 23</span>
+                                        <h3>My Trifles Grows in World Delivering Impact on woman</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/6.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Success history, February 26</span>
+                                        <h3>Wrapping Up a Successful Month of Orientation Senegal</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/7.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Trifles for tech, 22 January</span>
+                                        <h3>Reasons why you should choose organic</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/8.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Woman for Trifles, August 23</span>
+                                        <h3>Be healthy, Enjoy life with Rimu organic</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/6.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Success history, February 26</span>
+                                        <h3>Buy organic food online and be healthy</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/1.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Woman for Trifles, August 23</span>
+                                        <h3>Be healthy, Enjoy life with Rimu organic</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/2.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Success history, February 26</span>
+                                        <h3>Buy organic food online and be healthy</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/4.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Trifles for tech, 22 January</span>
+                                        <h3>Innovating with Autodesk my Trifles Partnership Adds</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-blog-item-two">
+                                    <div class="blog-image">
+                                        <img src="assets/img/blog/5.jpg" alt="image">
+                                    </div>
+        
+                                    <div class="blog-content">
+                                        <span>Woman for Trifles, August 23</span>
+                                        <h3>My Trifles Grows in World Delivering Impact on woman</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                                        <div class="blog-btn">
+                                            <a href="single-news.html" class="blog-btn-one">
+                                                Learn more 
+                                                <i class="flaticon-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="pagination-area">
+                                    <a href="#" class="prev page-numbers"><i class="fas fa-angle-double-left"></i></a>
+                                    <a href="#" class="page-numbers">1</a>
+                                    <span class="page-numbers current" aria-current="page">2</span>
+                                    <a href="#" class="page-numbers">3</a>
+                                    <a href="#" class="page-numbers">4</a>
+                                    <a href="#" class="next page-numbers"><i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <aside class="widget-area" id="secondary">
+                            <section class="widget widget_search">
+                                <form class="search-form search-top">
+                                    <label>
+                                        <span class="screen-reader-text">Search for:</span>
+                                        <input type="search" class="search-field" placeholder="Search...">
+                                    </label class="">
+                                    <button type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </form>
+                            </section>
+                            <section class="widget widget_trifles_posts_thumb">
+                                <h3 class="widget-title">Popular Posts</h3>
+                                <article class="item">
+                                    <a href="#" class="thumb">
+                                        <span class="fullimage cover bg1" role="img"></span>
+                                    </a>
+                                    <div class="info">
+                                        <time class="2022-06-30">June 10, 2022</time>
+                                        <h4 class="title usmall">
+                                            <a href="#">Making Peace With The Feast Or Famine Of Freelancing</a>
+                                        </h4>
+                                    </div>
+                                </article>
+
+                                <article class="item">
+                                    <a href="#" class="thumb">
+                                        <span class="fullimage cover bg2" role="img"></span>
+                                    </a>
+                                    <div class="info">
+                                        <time class="2022-06-30">June 21, 2022</time>
+                                        <h4 class="title usmall">
+                                            <a href="#">Be healthy, Enjoy life with Trifles organic</a>
+                                        </h4>
+                                    </div>
+                                </article>
+
+                                <article class="item">
+                                    <a href="#" class="thumb">
+                                        <span class="fullimage cover bg3" role="img"></span>
+                                    </a>
+                                    <div class="info">
+                                        <time class="2022-06-30">June 30, 2022</time>
+                                        <h4 class="title usmall">
+                                            <a href="#">Buy organic food online and be healthy</a>
+                                        </h4>
+                                    </div>
+                                </article>
+                            </section>
+
+                            <section class="widget widget_categories">
+                                <h3 class="widget-title">Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Business</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Privacy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Technology</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tips</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Uncategorized</a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="widget widget_recent_comments">
+                                <h3 class="widget-title">Recent Comments</h3>
+                                <ul>
+                                    <li>
+                                        <span class="comment-author-link">
+                                            <a href="#">A WordPress Commenter</a>
+                                        </span>
+                                        on
+                                        <a href="#">Hello world!</a>
+                                    </li>
+                                    <li>
+                                        <span class="comment-author-link">
+                                            <a href="#">Trifles</a>
+                                        </span>
+                                        on
+                                        <a href="#">Hello world!</a>
+                                    </li>
+                                    <li>
+                                        <span class="comment-author-link">
+                                            <a href="#">Wordpress</a>
+                                        </span>
+                                        on
+                                        <a href="#">Hello world!</a>
+                                    </li>
+                                    <li>
+                                        <span class="comment-author-link">
+                                            <a href="#">A WordPress Commenter</a>
+                                        </span>
+                                        on
+                                        <a href="#">Hello world!</a>
+                                    </li>
+                                    <li>
+                                        <span class="comment-author-link">
+                                            <a href="#">Trifles</a>
+                                        </span>
+                                        on
+                                        <a href="#">Hello world!</a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="widget widget_recent_entries">
+                                <h3 class="widget-title">Recent Posts</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">How to Become a Successful Entry Level UX Designer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">How to start your business as an entrepreneur</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">How to be a successful entrepreneur</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">10 Building Mobile Apps With Ionic And React</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Protect your workplace from cyber attacks</a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="widget widget_meta">
+                                <h3 class="widget-title">Meta</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Log in</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Entries 
+                                            <abbr title="Really Simple Syndication">RSS</abbr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Comments 
+                                            <abbr title="Really Simple Syndication">RSS</abbr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">WordPress.org</a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="widget widget_tag_cloud">
+                                <h3 class="widget-title">Tags</h3>
+                                <div class="tagcloud section-bottom">
+                                    <a href="#">
+                                        IT 
+                                        <span class="tag-link-count"> (3)</span>
+                                    </a>
+                                    <a href="#">
+                                        Trifles 
+                                        <span class="tag-link-count"> (3)</span>
+                                    </a>
+                                    <a href="#">
+                                        Games 
+                                        <span class="tag-link-count"> (2)</span>
+                                    </a>
+                                    <a href="#">
+                                        Fashion 
+                                        <span class="tag-link-count"> (2)</span>
+                                    </a>
+                                    <a href="#">
+                                        Travel 
+                                        <span class="tag-link-count"> (1)</span>
+                                    </a>
+                                    <a href="#">
+                                        Smart 
+                                        <span class="tag-link-count"> (1)</span>
+                                    </a>
+                                    <a href="#">
+                                        Marketing 
+                                        <span class="tag-link-count"> (1)</span>
+                                    </a>
+                                    <a href="#">
+                                        Tips 
+                                        <span class="tag-link-count"> (2)</span>
+                                    </a>
+                                </div>
+                            </section>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Blog Section -->
+
+@* <section class="page-header">
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="/">@Localizer["Home"]</a></li>
+                <li><span>/</span></li>
+                <li>
+                    <h6>@Localizer["Articles"]</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="news-one">
+    <div class="col-xl-12 col-lg-12" style="text-align: center;">
+        <div class="services-one__top-left">
+            <div class="section-title text-left">
+                <div class="section-sub-title-box">
+                    <h1 class="section-sub-title">@Localizer["Articles"]</h1>
+                    @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+                    {
+                        <div class="section-title-shape-1">
+                            <img src="~/assets/images/AfzarAzma/Background/004.png" alt="">
+                        </div>
+                        <div class="section-title-shape-2">
+                            <img src="~/assets/images/AfzarAzma/Background/003.png" alt="">
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="section-title-shape-1">
+                            <img src="~/assets/images/AfzarAzma/Background/003.png" alt="">
+                        </div>
+                        <div class="section-title-shape-2">
+                            <img src="~/assets/images/AfzarAzma/Background/004.png" alt="">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach (var article in Model.Articles)
+            {
+                <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp animated" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUp;">
+                    <div class="news-one__single">
+                        <div class="news-one__img">
+                            <img src="~/images/@article.Picture" alt="@article.PictureAlt" title="@article.PictureTitle">
+                            <div class="news-one__tag">
+                                <p><i class="far fa-folder"></i>@article.CategoryName</p>
+                            </div>
+                            <div class="news-one__arrow-box">
+                                <a href="/ArticleDetails/@article.Slug" class="news-one__arrow">
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="news-one__content">
+                            <ul class="list-unstyled news-one__meta">
+                                <li>
+                                    <a href="/ArticleDetails/@article.Slug">
+                                        <i class="far fa-calendar"></i>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+                                        {
+                                            @article.PublishDate
+                                        }
+                                        else
+                                        {
+                                            @article.PublishDate.ToGeorgianDateTime().ToString("yyyy MMMM dd")
+                                        }
+
+                                    </a>
+                                </li>
+                            </ul>
+                            <h3 class="news-one__title"><a href="/ArticleDetails/@article.Slug">@article.Title</a></h3>
+                            <p class="news-one__text">
+                                @{
+                                    string text = article.ShortDescription;
+                                    string displayText = text.Length > 100 ? text.Substring(0, 100) + "..." : text;
+                                }
+                                @displayText
+                            </p>
+                            <div class="news-one__read-more">
+                                <a href="/ArticleDetails/@article.Slug">
+                                    @Localizer["More"]
+                                    @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+                                    {
+                                        <i class="fas fa-angle-double-left"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-angle-double-right"></i>
+                                    }
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section> *@

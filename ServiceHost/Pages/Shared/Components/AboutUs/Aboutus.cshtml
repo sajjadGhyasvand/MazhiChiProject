@@ -1,0 +1,112 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+@using GeneralManagement.Domain.GeneralAgg
+@using My_ShopQuery.Contract.GeneralSetting
+@model My_ShopQuery.Contract.AboutUs.AboutUsQueryModel
+@inject IViewLocalizer Localizer
+@inject IGeneralSettingQueryModel _general
+
+<section class="about-section ptb-100">
+    <div class="container">
+        <div class="about-title-area">
+            <div class="row">
+                <div class="col-lg-7 col-md-12">
+                    <div class="about-title">
+                        <span>KNOW ABOUT US</span>
+                        <h2>The territory might be safe is vegetable easy to get</h2>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12">
+                    <div class="about-text">
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="assets/img/about/about-2.jpg" alt="image">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-slider owl-carousel owl-theme">
+                    <div class="about-item">
+                        <div class="about-slide-image">
+                            <img src="assets/img/about/1.png" alt="image">
+                        </div>
+                        <div class="about-text">
+                            <span>Healthy journey</span>
+                            <h3>100% Clean & fresh agro services with low cost</h3>
+                        </div>
+                    </div>
+
+                    <div class="about-item">
+                        <div class="about-slide-image">
+                            <img src="assets/img/about/2.png" alt="image">
+                        </div>
+                        <div class="about-text">
+                            <span>Pure agro services</span>
+                            <h3>Rich in nutrients but no formal or defect</h3>
+                        </div>
+                    </div>
+
+                    <div class="about-item">
+                        <div class="about-slide-image">
+                            <img src="assets/img/about/3.png" alt="image">
+                        </div>
+                        <div class="about-text">
+                            <span>Healthy journey</span>
+                            <h3>Clean & fresh agro services with low cost</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content-area">
+                    <div class="about-content">
+                        <h3>Life is not like a species do you believe?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    </div>
+
+                    <ul class="about-list">
+                        <li>
+                            <i class="flaticon-check"></i>
+                            Get Back to Healthy Life
+                        </li>
+
+                        <li>
+                            <i class="flaticon-check"></i>
+                            Wake Up Refreshed
+                        </li>
+
+                        <li>
+                            <i class="flaticon-check"></i>
+                            Set a Healthier Lifestyle
+                        </li>
+
+                        <li>
+                            <i class="flaticon-check"></i>
+                            Boost Energy & Metabolism
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="default-shape">
+        <div class="default-shape-two">
+            <img src="assets/img/default-shape/shape-blue-2.png" alt="image">
+        </div>
+
+        @*   <div class="default-shape-two">
+        <img src="assets/img/default-shape/shape-2.png" alt="image">
+        </div> *@
+    </div>
+    <div class="about-shape-image">
+        <img src="assets/img/about/about-shape.png" alt="image">
+    </div>
+   
+</section>
