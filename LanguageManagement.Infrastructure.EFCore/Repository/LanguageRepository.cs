@@ -27,8 +27,6 @@ namespace LanguageManagement.Infrastructure.EFCore.Repository
                 LanguageTitle = x.LanguageTitle,
                 LanguageNameAr = x.LanguageNameAr,
                 LanguageNameEn = x.LanguageNameEn,
-                LanguageNameRu = x.LanguageNameRu,
-                LanguageNameFa = x.LanguageNameFa,
                 Id = x.Id,
             }).FirstOrDefault(x => x.Id == id);
         }
