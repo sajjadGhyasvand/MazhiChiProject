@@ -1,0 +1,46 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Account.Role.CreateModel
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["title"] = "ایجاد نقش جدید";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">ایجاد نقش جدید</h3>
+            </div>
+            <div class="panel-body">
+                <form method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Command.Name" class="control-label">نام دسترسی</label>
+                                <input type="text" class="form-control" asp-for="Command.Name">
+                                <span asp-validation-for="Command.Name" class="error"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Command.PersianName" class="control-label">نام دسترسی به فارسی</label>
+                                <input type="text" class="form-control" asp-for="Command.PersianName">
+                                <span asp-validation-for="Command.PersianName" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                        
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a asp-page="Index" class="btn btn-danger btn-block btn-rounded waves-effect m-b-5">بازگشت</a>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success btn-block btn-rounded waves-effect m-b-5">ایجاد</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

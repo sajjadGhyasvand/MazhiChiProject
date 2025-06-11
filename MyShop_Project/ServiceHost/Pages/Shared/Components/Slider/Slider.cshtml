@@ -1,0 +1,80 @@
+﻿@model My_ShopQuery.Contract.Slider.SliderQueryModel
+
+<div class="home-banner-two">
+    <div class="home-slides owl-carousel owl-theme">
+        @foreach (var item  in Model.SlideQueryModels)
+        {
+            <div class="home-item item-bg1">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="main-banner-content">
+                                <h1>@item.Heading</h1>
+                                <p>@item.Text</p>
+
+                                <div class="banner-btn">
+                                    <a href="#" class="default-btn">
+                                       How to order
+                                        <i class="flaticon-plus"></i>
+                                        <span></span>
+                                    </a>
+                                    @if (!string.IsNullOrWhiteSpace(item.BtnText))
+                                    {
+                                        <a class="optional-btn" href="@item.Link">
+                                            @item.BtnText
+                                            <i class="flaticon-plus"></i>
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="banner-social-buttons">
+        <ul>
+            <li>
+                Follow us _
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="creative-shape">
+        <img src="assets/img/default-shape/shape-blue.png" alt="image">
+    </div>
+
+    <div class="shape-img1">
+        <img src="assets/img/home-two/shape-1.png" alt="image">
+    </div>
+
+    <div class="shape-img2">
+        <img src="assets/img/home-two/shape-2.png" alt="image">
+    </div>
+</div>

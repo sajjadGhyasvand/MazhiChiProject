@@ -1,0 +1,166 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using My_Shop_Framework.Application
+@inject IViewLocalizer Localizer
+
+@model System.Collections.Generic.List<My_ShopQuery.Contract.Article.ArticleQueryModel>
+
+
+
+@* <section class="news-two" id="news">
+    <div class="container">
+        <div class="section-title text-center">
+            <div class="section-sub-title-box">
+                <p class="section-sub-title">@Localizer["LatestArticles"]</p>
+                @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+                {
+                    <div class="section-title-shape-1">
+                        <img src="~/assets/images/AfzarAzma/Background/004.png" alt="">
+                    </div>
+                    <div class="section-title-shape-2">
+                        <img src="~/assets/images/AfzarAzma/Background/003.png" alt="">
+                    </div>
+                }
+                else
+                {
+                    <div class="section-title-shape-1">
+                        <img src="~/assets/images/AfzarAzma/Background/003.png" alt="">
+                    </div>
+                    <div class="section-title-shape-2">
+                        <img src="~/assets/images/AfzarAzma/Background/004.png" alt="">
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-4 col-lg-4 wow fadeInUp animated" data-wow-delay="100ms"
+                     style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUp;">
+                    <a href="/ArticleDetails/@item.Slug">
+                        <div class="news-two__single">
+                            <div class="news-two__img">
+                                <img src="~/Images/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle">
+                                <div class="news-two__arrow-box">
+                                    <a href="/ArticleDetails/@item.Slug" class="news-two__arrow">
+                                        <span class="icon-right-arrow1"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news-two__content">
+                                <h3 class="news-two__title">
+                                    <a href="/ArticleDetails/@item.Slug">
+                                        @item.Title
+                                    </a>
+                                </h3>
+                                <div class="news-two__client">
+                                    <div class="news-two__client-content">
+                                        <h5>
+                                            @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+                                            {
+                                                @item.PublishDate
+                                            }
+                                            else
+                                            {
+                                                @item.PublishDate.ToGeorgianDateTime().ToString("yyyy MMMM dd")
+                                            }
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="news-two__tag">
+                                    <p>
+                                        <i class="far fa-folder"></i>@item.CategoryName
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section> *@
+
+
+<!-- Start Blog Section -->
+<section class="blog-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>OUR BLOG</span>
+            <h3>Articles & news</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreonsectetur adipiscinet dolore.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-item-two">
+                    <div class="blog-image">
+                        <img src="assets/img/blog/4.jpg" alt="image">
+                    </div>
+
+                    <div class="blog-content">
+                        <span>Trifles for tech, 22 January</span>
+                        <h3>Innovating with Autodesk my Trifles Partnership Adds</h3>
+                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                        <div class="blog-btn">
+                            <a href="/ArticleDetails/1" class="blog-btn-one">
+                                Learn more
+                                <i class="flaticon-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog-item-two">
+                    <div class="blog-image">
+                        <img src="assets/img/blog/5.jpg" alt="image">
+                    </div>
+
+                    <div class="blog-content">
+                        <span>Woman for Trifles, August 23</span>
+                        <h3>My Trifles Grows in World Delivering Impact on woman</h3>
+                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                        <div class="blog-btn">
+                            <a href="single-news.html" class="blog-btn-one">
+                                Learn more
+                                <i class="flaticon-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                <div class="single-blog-item-two">
+                    <div class="blog-image">
+                        <img src="assets/img/blog/6.jpg" alt="image">
+                    </div>
+
+                    <div class="blog-content">
+                        <span>Success history, February 26</span>
+                        <h3>Wrapping Up a Successful Month of Orientation Senegal</h3>
+                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempo incididun.</p>
+                        <div class="blog-btn">
+                            <a href="single-news.html" class="blog-btn-one">
+                                Learn more
+                                <i class="flaticon-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3">
+                <a href="/ArticleList" class="moreblog-btn">
+                    More Blogs
+                    <i class="flaticon-plus"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- End Blog Section -->

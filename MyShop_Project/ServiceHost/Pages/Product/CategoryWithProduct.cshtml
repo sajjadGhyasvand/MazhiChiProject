@@ -1,0 +1,343 @@
+﻿@page "/CategoryWithProduct/{slug}"
+
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+@model CategoryWithProductModel
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = @Model.ProductCategoryQueryModel.Name;
+    ViewData["keywords"] = Model.ProductCategoryQueryModel.Keyword;
+    ViewData["metaDescription"] = Model.ProductCategoryQueryModel.MetaDescription;
+}
+
+<!-- Start Page Title Area -->
+<div class="page-title-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-title-content">
+                    <h2>Shop</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Shop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Area -->
+<!-- Start Shop Section -->
+<section class="shop-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>VISIT OUR SHOP</span>
+            <h3>Buy our product</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreonsectetur adipiscinet dolore.</p>
+        </div>
+
+        <div class="tab shop-list-tab">
+            <ul class="tabs">
+                <li>
+                    <span class="h4">Flowers</span>
+                </li>
+            </ul>
+
+            <div class="tab_content">
+                <div class="tabs_item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="shop-item">
+                                <div class="shop-image">
+                                    <img src="assets/img/shop/cauliflower.png" alt="image">
+                                </div>
+
+                                <ul class="shop-list">
+                                    <li>
+                                        <a href="/ProductDetails/Id">
+                                            Fruit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="shop-content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <div class="shop-btn">
+                                        <a href="cart.html" class="shop-btn-one">
+                                            See Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="shop-item">
+                                <div class="shop-image">
+                                    <img src="assets/img/shop/cauliflower.png" alt="image">
+                                </div>
+
+                                <ul class="shop-list">
+                                    <li>
+                                        <a href="/ProductDetails/Id">
+                                            Fruit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="shop-content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <div class="shop-btn">
+                                        <a href="cart.html" class="shop-btn-one">
+                                            See Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="shop-item">
+                                <div class="shop-image">
+                                    <img src="assets/img/shop/cauliflower.png" alt="image">
+                                </div>
+
+                                <ul class="shop-list">
+                                    <li>
+                                        <a href="/ProductDetails/Id">
+                                            Fruit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="shop-content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <div class="shop-btn">
+                                        <a href="cart.html" class="shop-btn-one">
+                                            See Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="shop-item">
+                                <div class="shop-image">
+                                    <img src="assets/img/shop/cauliflower.png" alt="image">
+                                </div>
+
+                                <ul class="shop-list">
+                                    <li>
+                                        <a href="/ProductDetails/Id">
+                                            Fruit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="shop-content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <div class="shop-btn">
+                                        <a href="cart.html" class="shop-btn-one">
+                                            See Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="shop-item">
+                                <div class="shop-image">
+                                    <img src="assets/img/shop/cauliflower.png" alt="image">
+                                </div>
+
+                                <ul class="shop-list">
+                                    <li>
+                                        <a href="/ProductDetails/Id">
+                                            Fruit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="shop-content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <div class="shop-btn">
+                                        <a href="cart.html" class="shop-btn-one">
+                                            See Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="shop-item">
+                                <div class="shop-image">
+                                    <img src="assets/img/shop/cauliflower.png" alt="image">
+                                </div>
+
+                                <ul class="shop-list">
+                                    <li>
+                                        <a href="/ProductDetails/Id">
+                                            Fruit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="shop-content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <div class="shop-btn">
+                                        <a href="cart.html" class="shop-btn-one">
+                                            See Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="shop-item">
+                                <div class="shop-image">
+                                    <img src="assets/img/shop/cauliflower.png" alt="image">
+                                </div>
+
+                                <ul class="shop-list">
+                                    <li>
+                                        <a href="/ProductDetails/Id">
+                                            Fruit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="shop-content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <div class="shop-btn">
+                                        <a href="cart.html" class="shop-btn-one">
+                                            See Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="shop-item">
+                                <div class="shop-image">
+                                    <img src="assets/img/shop/cauliflower.png" alt="image">
+                                </div>
+
+                                <ul class="shop-list">
+                                    <li>
+                                        <a href="/ProductDetails/Id">
+                                            Fruit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="shop-content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <div class="shop-btn">
+                                        <a href="cart.html" class="shop-btn-one">
+                                            See Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Shop Section -->
+
+@* <section class="page-header">
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li>
+                    <a href="/">@Localizer["Home"]</a>
+                </li>
+                <li>
+                    <span>/</span>
+                </li>
+                <li>
+                    <h6>@Model.ProductCategoryQueryModel.Name</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="product">
+    <div class="container">
+        <div class="col-xl-12 col-lg-12" style="text-align: center;">
+            <div class="services-one__top-left">
+                <div class="section-title text-left">
+                    <div class="section-sub-title-box">
+                        <h1 class="section-sub-title">@Model.ProductCategoryQueryModel.Name</h1>
+                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+                        {
+                            <div class="section-title-shape-1">
+                                <img src="~/assets/images/AfzarAzma/Background/004.png" alt="">
+                            </div>
+                            <div class="section-title-shape-2">
+                                <img src="~/assets/images/AfzarAzma/Background/003.png" alt="">
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="section-title-shape-1">
+                                <img src="~/assets/images/AfzarAzma/Background/003.png" alt="">
+                            </div>
+                            <div class="section-title-shape-2">
+                                <img src="~/assets/images/AfzarAzma/Background/004.png" alt="">
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-3">
+                <div class="product__sidebar">
+                     <div class="shop-search product__sidebar-single">
+                        <form action="#">
+                            <input type="text" placeholder="@Localizer["Search"]">
+                        </form>
+                    </div> 
+<div class="shop-category product__sidebar-single">
+    <h3 class="product__sidebar-title">@Localizer["ProductCategory"]</h3>
+    <ul class="list-unstyled">
+        <li><a href="/ProductList">@Localizer["Product"]</a></li>
+        @foreach (var item in Model.Category)
+        {
+            <li class="@(item.Id == Model.ProductCategoryQueryModel.Id ? "active" : "")"><a href="/CategoryWithProduct/@item.Slug">@item.Name</a></li>
+        }
+    </ul>
+</div>
+                </div>
+            </div>
+<div class="col-xl-9 col-lg-9">
+    <div class="product__all">
+        <div class="row">
+            @foreach (var item in Model.ProductCategoryQueryModel.Products)
+            {
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <a href="/ProductDetails/@item.Slug">
+                        <div class="product__all-single">
+                            <div class="product__all-img">
+                                <img src="~/Images/@item.Picture" alt="">
+                                <div class="product__all-btn-box">
+                                    <a href="/ProductDetails/@item.Slug" class="thm-btn product__all-btn">@Localizer["More"]</a>
+                                </div>
+                            </div>
+                            <div class="product__all-content">
+                                <h4 class="product__all-title"><a href="/ProductDetails/@item.Slug">@item.Name</a></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</section>*@
+ 

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogManagement.Infrastructure.EFCore\BlogManagement.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\CommentManagement.Domain\CommentManagement.Domain.csproj" />
+    <ProjectReference Include="..\CommentManagement.Infrastructure.EFCore\CommentManagement.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\GeneralManagement.Infrastructure.EFCore\GeneralManagement.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\ShopManagement.Infrastructure.EFCore\ShopManagement.Infrastructure.EFCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nancy" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>

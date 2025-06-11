@@ -1,0 +1,126 @@
+﻿@using GeneralManagement.Application.Contracts.SiteLogo
+
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using My_ShopQuery.Contract.SiteLogo
+@using System.Globalization
+<!DOCTYPE html>
+<html lang="en">
+@* @inject ISiteLogoQueryModel SiteLogoApplication
+@{
+    var logo = SiteLogoApplication.GetLogo();
+} *@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    @* <link rel="shortcut icon" href="~/Images/@logo.Picture">
+    <title> @logo.Title || @ViewData["Title"]</title> *@
+
+   
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/animate.min.css">
+    <!-- FontAwesome Min CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/all.min.css">
+    <!-- FlatIcon CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/flaticon.css">
+    <!-- Popup CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/magnific-popup.min.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/owl.carousel.min.css">
+    <!-- Image LightBox Min CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/imagelightbox.min.css">
+    <!-- Nice Select Min CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/nice-select.min.css">
+    <!-- MeanMenu CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/meanmenu.css">
+    <!-- Odometer CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/odometer.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/style.css">
+    <!-- Dark CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/dark.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/assets/LTR/css/responsive.css">
+    @*  } *@
+
+    @await RenderSectionAsync("Css", required: false)
+</head>
+
+<body>
+
+
+    <div class="wrapper-page">
+        @RenderBody()
+    </div>
+
+    @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+    {
+        <!-- jQuery Min JS -->
+        <script src="~/assets/RTL/js/jquery.min.js"></script>
+        <!-- Bootstrap Min JS -->
+        <script src="~/assets/RTL/js/bootstrap.bundle.min.js"></script>
+        <!-- MeanMenu JS -->
+        <script src="~/assets/RTL/js/jquery.meanmenu.js"></script>
+        <!-- Appear JS -->
+        <script src="~/assets/RTL/js/jquery.appear.min.js"></script>
+        <!-- Odometer JS -->
+        <script src="~/assets/RTL/js/odometer.min.js"></script>
+        <!-- Owl Carousel Min JS -->
+        <script src="~/assets/RTL/js/owl.carousel.min.js"></script>
+        <!-- Popup JS -->
+        <script src="~/assets/RTL/js/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Selects Min JS -->
+        <script src="~/assets/RTL/js/jquery.nice-select.min.js"></script>
+        <!-- Image LightBox Min JS -->
+        <script src="~/assets/RTL/js/imagelightbox.min.js"></script>
+        <!-- AjaxChimp Min JS -->
+        <script src="~/assets/RTL/js/jquery.ajaxchimp.min.js"></script>
+        <!-- Form Validator Min JS -->
+        <script src="~/assets/RTL/js/form-validator.min.js"></script>
+        <!-- Contact Form Min JS -->
+        <script src="~/assets/RTL/js/contact-form-script.js"></script>
+        <!-- Wow Min JS -->
+        <script src="~/assets/RTL/js/wow.min.js"></script>
+        <!-- Main JS -->
+        <script src="~/assets/RTL/js/main.js"></script>
+    }
+    else
+    {
+        <!-- jQuery Min JS -->
+        <script src="~/assets/LTR/js/jquery.min.js"></script>
+        <!-- Bootstrap Min JS -->
+        <script src="~/assets/LTR/js/bootstrap.bundle.min.js"></script>
+        <!-- MeanMenu JS -->
+        <script src="~/assets/LTR/js/jquery.meanmenu.js"></script>
+        <!-- Appear JS -->
+        <script src="~/assets/LTR/js/jquery.appear.min.js"></script>
+        <!-- Odometer JS -->
+        <script src="~/assets/LTR/js/odometer.min.js"></script>
+        <!-- Owl Carousel Min JS -->
+        <script src="~/assets/LTR/js/owl.carousel.min.js"></script>
+        <!-- Popup JS -->
+        <script src="~/assets/LTR/js/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Selects Min JS -->
+        <script src="~/assets/LTR/js/jquery.nice-select.min.js"></script>
+        <!-- Image LightBox Min JS -->
+        <script src="~/assets/LTR/js/imagelightbox.min.js"></script>
+        <!-- AjaxChimp Min JS -->
+        <script src="~/assets/LTR/js/jquery.ajaxchimp.min.js"></script>
+        <!-- Form Validator Min JS -->
+        <script src="~/assets/LTR/js/form-validator.min.js"></script>
+        <!-- Contact Form Min JS -->
+        <script src="~/assets/LTR/js/contact-form-script.js"></script>
+        <!-- Wow Min JS -->
+        <script src="~/assets/LTR/js/wow.min.js"></script>
+        <!-- Main JS -->
+        <script src="~/assets/LTR/js/main.js"></script>
+    }
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>
