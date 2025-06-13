@@ -1,10 +1,9 @@
-﻿using LanguageManagement.Application.Contracts.Language;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using My_Shop_Framework.Application;
 using ShopManagement.Application.Contracts.Product;
 using ShopManagement.Application.Contracts.ProductCategory;
-using My_Shop_Framework.Application;
 using ShopManagement.Infrastructure.EFCore;
 
 namespace ServiceHost.Areas.Admin.Pages.Shop.Products
@@ -18,20 +17,17 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
         public SelectList ListLanguage;
         private readonly IProductApplication _productApplication;
         private readonly IProductCategoryApplication _productCategoryApplication;
-        private readonly ILanguageApplication _languageApplication;
 
         public CreateModel(IProductApplication productApplication,
-            IProductCategoryApplication productCategoryApplication, ILanguageApplication languageApplication)
+            IProductCategoryApplication productCategoryApplication)
         {
             _productApplication = productApplication;
             _productCategoryApplication = productCategoryApplication;
-            _languageApplication = languageApplication;
         }
 
         public void OnGet()
         {
             ProductCategories = new SelectList(_productCategoryApplication.GetProductCategories(), "Id", "Name");
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
        }
 
         public IActionResult OnPost(CreateProduct command)
@@ -48,12 +44,10 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
                 }
                 Message = result.Massage;
                 ProductCategories = new SelectList(_productCategoryApplication.GetProductCategories(), "Id", "Name");
-                ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
                 return Page();
             }
             Message = ValidationMessages.ReturnPageFail;
             ProductCategories = new SelectList(_productCategoryApplication.GetProductCategories(), "Id", "Name");
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             return Page();
         }
     }

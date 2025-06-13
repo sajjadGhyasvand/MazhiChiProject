@@ -1,7 +1,4 @@
-using BlogManagement.Application.Contracts.ArticleCategory;
-using BlogManagement.Application.Contracts.Articles;
 using GeneralManagement.Application.Contracts.Faq;
-using LanguageManagement.Application.Contracts.Language;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,18 +12,16 @@ namespace ServiceHost.Areas.Admin.Pages.Faq
         public EditFaq Command;
         public SelectList ListLanguage;
         private readonly IFaqApplication _faqApplication;
-        private readonly ILanguageApplication _languageApplication;
 
-        public EditModel(IFaqApplication faqApplication, ILanguageApplication languageApplication)
+        public EditModel(IFaqApplication faqApplication)
         {
             _faqApplication = faqApplication;
-            _languageApplication = languageApplication;
+
         }
 
 
         public void OnGet(long id)
         {
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             Command = _faqApplication.GetDetails(id);
         }
         public IActionResult OnPost(EditFaq command)
@@ -38,7 +33,6 @@ namespace ServiceHost.Areas.Admin.Pages.Faq
                 return RedirectToPage("./Index");
                return Page();
             }
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             Message = ValidationMessages.ReturnPageFail;
             return Page();
         }

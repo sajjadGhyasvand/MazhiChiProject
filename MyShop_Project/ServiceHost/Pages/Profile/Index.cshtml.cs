@@ -13,14 +13,12 @@ namespace ServiceHost.Pages.Profile
     public class IndexModel : PageModel
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly EmailSender _emailSender;
         private readonly IAntiforgery _antiforgery;
         private string _errorMessage;
 
-        public IndexModel(UserManager<ApplicationUser> userManager, EmailSender emailSender, IAntiforgery antiforgery)
+        public IndexModel(UserManager<ApplicationUser> userManager, IAntiforgery antiforgery)
         {
             _userManager = userManager;
-            _emailSender = emailSender;
             _antiforgery = antiforgery;
         }
         public string RequestVerificationToken { get; private set; }
@@ -102,7 +100,7 @@ namespace ServiceHost.Pages.Profile
                 _errorMessage = LoginMessage.GetMessage("EmailVerification", CultureInfo.CurrentCulture.Name);
                 var subject = "_errorMessage";
                 var body = $"<p>ایمیل شما با موفقیت ثبت شد.</p><p>آدرس ایمیل: {email}</p>";
-                await _emailSender.SendEmailAsync(email, subject, body);
+                //await _emailSender.SendEmailAsync(email, subject, body);
             }
             catch (Exception ex)
             {

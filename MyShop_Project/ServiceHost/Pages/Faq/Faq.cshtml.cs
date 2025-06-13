@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using My_ShopQuery.Contract.Events;
 using My_ShopQuery.Contract.Faq;
 
 namespace ServiceHost.Pages.Faq

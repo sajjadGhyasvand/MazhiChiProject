@@ -1,5 +1,4 @@
 using GeneralManagement.Application.Contracts.AboutUs;
-using LanguageManagement.Application.Contracts.Language;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,18 +13,15 @@ namespace ServiceHost.Areas.Admin.Pages.General.AboutUs
         public EditAboutUs Command;
         public SelectList ListLanguage;
         private readonly IAboutUsApplication _aboutUsApplication;
-        private readonly ILanguageApplication _languageApplication;
 
-        public EditModel(IAboutUsApplication aboutUsApplication, ILanguageApplication languageApplication)
+        public EditModel(IAboutUsApplication aboutUsApplication)
         {
             _aboutUsApplication = aboutUsApplication;
-            _languageApplication = languageApplication;
         }
 
 
         public void OnGet(long id)
         {
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             Command = _aboutUsApplication.GetDetails(id);
         }
         public IActionResult OnPost(EditAboutUs command)
@@ -35,7 +31,6 @@ namespace ServiceHost.Areas.Admin.Pages.General.AboutUs
                 result = _aboutUsApplication.Edit(command);
                 return RedirectToPage("./Index");
             }
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             Message = ValidationMessages.ReturnPageFail;
             return Page();
         }

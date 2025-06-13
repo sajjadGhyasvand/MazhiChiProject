@@ -6,17 +6,15 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
-	<ItemGroup>
-		
-		<ProjectReference Include="..\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />
-		
+	<ItemGroup>		
+		<ProjectReference Include="..\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />	
+		<ProjectReference Include="..\BlogManagement.Application.Contracts\BlogManagement.Application.Contracts.csproj" />	
 		<ProjectReference Include="..\BlogManagement.Configuration\BlogManagement.Configuration.csproj" />
 		<ProjectReference Include="..\CommentManagement.Application.Contracts\CommentManagement.Application.Contracts.csproj" />
 		<ProjectReference Include="..\CommentManagement.Configuration\CommentManagement.Configuration.csproj" />
 		<ProjectReference Include="..\GeneralManagement.Configuration\GeneralManagement.Configuration.csproj" />
 		<ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />
 	</ItemGroup>
-
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.16" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.16" />

@@ -1,7 +1,4 @@
-
-using GeneralManagement.Application.Contracts.Faq;
 using GeneralManagement.Application.Contracts.GeneralSetting;
-using LanguageManagement.Application.Contracts.Language;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,18 +12,15 @@ namespace ServiceHost.Areas.Admin.Pages.General.GeneralSetting
         public CreateGeneralSetting Command;
         public SelectList ListLanguage;
         private readonly IGeneralSettingApplication _generalSettingApplication;
-        private readonly ILanguageApplication _languageApplication;
 
-        public CreateModel(IGeneralSettingApplication generalSettingApplication, ILanguageApplication languageApplication)
+        public CreateModel(IGeneralSettingApplication generalSettingApplication)
         {
             _generalSettingApplication = generalSettingApplication;
-            _languageApplication = languageApplication;
         }
 
 
         public void OnGet()
         {
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
         }
 
         public IActionResult OnPost(CreateGeneralSetting command)
@@ -37,7 +31,6 @@ namespace ServiceHost.Areas.Admin.Pages.General.GeneralSetting
                 result = _generalSettingApplication.Create(command);
                 return RedirectToPage("./Index");
             }
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             Message = ValidationMessages.ReturnPageFail;
             return Page();
 

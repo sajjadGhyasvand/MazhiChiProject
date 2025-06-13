@@ -31,7 +31,7 @@ namespace My_ShopQuery.Query
                     LanguageId = a.LanguageId,
                     Poster = a.Poster,
                     Video = a.Video
-                }).AsNoTracking().SingleOrDefault();
+                }).AsNoTracking().FirstOrDefault();
         }
     }
 }

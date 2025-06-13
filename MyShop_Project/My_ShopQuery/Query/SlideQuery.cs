@@ -15,8 +15,7 @@ namespace My_ShopQuery.Query
 
         public List<SlideQueryModel> GetSlidesList()
         {
-            var currentLanguage = CultureInfo.CurrentCulture.ToString();
-            
+
             return _shopContext.Slides.Select(x => new SlideQueryModel
             {
                 Heading = x.Heading,

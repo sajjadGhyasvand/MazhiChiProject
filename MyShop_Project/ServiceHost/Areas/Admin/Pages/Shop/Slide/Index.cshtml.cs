@@ -2,10 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
-using LanguageManagement.Application.Contracts.Language;
-using ShopManagement.Application.Contracts.Slide;
 using My_Shop_Framework.Application;
+using ShopManagement.Application.Contracts.Slide;
 
 namespace ServiceHost.Areas.Admin.Pages.Shop.Slide
 {
@@ -17,16 +15,13 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Slide
         public SliderSearchModel SearchModel;
         public SelectList ListLanguage;
         private readonly ISlideApplication _slideApplication;
-        private readonly ILanguageApplication _languageApplication;
-        public IndexModel(ISlideApplication slideApplication, ILanguageApplication languageApplication)
+        public IndexModel(ISlideApplication slideApplication)
         {
             _slideApplication = slideApplication;
-            _languageApplication = languageApplication;
         }
 
         public void OnGet(SliderSearchModel searchModel)
         {
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             SlideViewModels = _slideApplication.Search(searchModel);
         }
 
@@ -34,7 +29,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Slide
         {
             var command = new CreateSlide()
             {
-                ListLanguage = _languageApplication.List()
+               
             };
             return Partial("./Create", command);
         }
@@ -54,7 +49,6 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Slide
         public IActionResult OnGetEdit(long id)
         {
             var slide = _slideApplication.GetDetails(id);
-            slide.ListLanguage= _languageApplication.List();
             return Partial("./Edit", slide);
         }
         public JsonResult OnPostEdit(EditSlide commend)

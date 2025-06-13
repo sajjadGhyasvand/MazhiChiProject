@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using LanguageManagement.Application.Contracts.Language;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,18 +12,14 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.ProductCategory
         public ProductCategorySearchModel SearchModel;
         public SelectList ListLanguage;
         private readonly IProductCategoryApplication _productCategoryApplication;
-        private readonly ILanguageApplication _languageApplication;
 
-        public IndexModel(IProductCategoryApplication productCategoryApplication,
-            ILanguageApplication languageApplication)
+        public IndexModel(IProductCategoryApplication productCategoryApplication)
         {
             _productCategoryApplication = productCategoryApplication;
-            _languageApplication = languageApplication;
         }
 
         public void OnGet(ProductCategorySearchModel searchModel)
         {
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             ProductCategoryViewModels = _productCategoryApplication.Search(searchModel);
         }
 
@@ -33,7 +27,6 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.ProductCategory
         {
             var command = new CreateProductCategory
             {
-                ListLanguage = _languageApplication.List()
             };
 
             return Partial("./Create", command);
@@ -54,7 +47,6 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.ProductCategory
         public IActionResult OnGetEdit(long id)
         {
             var command = _productCategoryApplication.GetDetails(id);
-            command.ListLanguage = _languageApplication.List();
 
             return Partial("./Edit", command);
         }

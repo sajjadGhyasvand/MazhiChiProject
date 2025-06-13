@@ -1,6 +1,4 @@
 using GeneralManagement.Application.Contracts.Certificate;
-using GeneralManagement.Application.Contracts.SocialMedia;
-using LanguageManagement.Application.Contracts.Language;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,18 +13,15 @@ namespace ServiceHost.Areas.Admin.Pages.General.Certificate
         public EditCertificate Command;
         public SelectList ListLanguage;
         private readonly ICertificateApplication _certificateApplication;
-        private readonly ILanguageApplication _languageApplication;
-        public EditModel(ICertificateApplication certificateApplication, ILanguageApplication languageApplication)
+        public EditModel(ICertificateApplication certificateApplication)
         {
             _certificateApplication = certificateApplication;
-            _languageApplication = languageApplication;
         }
 
 
         public void OnGet(long id)
         {
             Command = _certificateApplication.GetDetails(id);
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
         }
         public IActionResult OnPost(EditCertificate command)
         {
@@ -39,10 +34,8 @@ namespace ServiceHost.Areas.Admin.Pages.General.Certificate
                 }
                 Message = result.Massage;
                 Command = command;
-                ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
                 return Page();
             }
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             Command = command;
             Message = ValidationMessages.ReturnPageFail;
             return Page();

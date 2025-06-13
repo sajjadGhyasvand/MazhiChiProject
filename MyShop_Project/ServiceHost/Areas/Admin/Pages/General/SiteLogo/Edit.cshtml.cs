@@ -1,6 +1,4 @@
-using GeneralManagement.Application.Contracts.AboutUs;
 using GeneralManagement.Application.Contracts.SiteLogo;
-using LanguageManagement.Application.Contracts.Language;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,18 +13,15 @@ namespace ServiceHost.Areas.Admin.Pages.General.SiteLogo
         public EditSiteLogo Command;
         public SelectList ListLanguage;
         private readonly ISiteLogoApplication _siteLogoApplication;
-        private readonly ILanguageApplication _languageApplication;
 
-        public EditModel(ILanguageApplication languageApplication, ISiteLogoApplication siteLogoApplication)
+        public EditModel(ISiteLogoApplication siteLogoApplication)
         {
-            _languageApplication = languageApplication;
             _siteLogoApplication = siteLogoApplication;
         }
 
 
         public void OnGet(long id)
         {
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             Command = _siteLogoApplication.GetDetails(id);
         }
 
@@ -37,11 +32,9 @@ namespace ServiceHost.Areas.Admin.Pages.General.SiteLogo
                 var result = _siteLogoApplication.Edit(command);
                 if (result.IsSuccess)
                     return RedirectToPage("./Index");
-                ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
                 Message = result.Massage;
                 return Page();
             }
-            ListLanguage = new SelectList(_languageApplication.List(), "Id", "LanguageTitle");
             Message = ValidationMessages.ReturnPageFail;
             return Page();
         }

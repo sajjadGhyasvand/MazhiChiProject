@@ -28,15 +28,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="LanguageId" class="control-label">زبان</label>
-                    <select asp-for="LanguageId" class="form-control" asp-items='new SelectList(Model.ListLanguage, "Id", "LanguageTitle")'>
-                        <option value="0">زبان را انتخاب کنید </option>
-                    </select>
-                    <span asp-validation-for="LanguageId" class="error"></span>
-                </div>
-            </div>
+           
             <div class="col-md-6">
                 <div class="form-group no-margin">
                     <label asp-for="MetaDescription" class="control-label">توضیحات متا</label>

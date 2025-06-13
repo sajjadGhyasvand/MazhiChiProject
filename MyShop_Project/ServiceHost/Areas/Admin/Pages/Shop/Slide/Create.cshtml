@@ -12,15 +12,7 @@
       enctype="multipart/form-data">
     <div class="modal-body">
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="LanguageId" class="control-label">زبان</label>
-                    <select class="form-control" asp-for="LanguageId" asp-items='new SelectList(Model.ListLanguage, "Id", "LanguageTitle")'>
-                        <option value="0">یک زبان کنید</option>
-                    </select>
-                    <span asp-validation-for="LanguageId" class="error"></span>
-                </div>
-            </div>
+            
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Heading" class="control-label">سرتیتر</label>

@@ -26,11 +26,10 @@ namespace ServiceHost.Areas.Admin.Pages.Blog.ArticlesCategory
             ArticulateCategoryViewModels = _articulateCategoryApplication.Search(searchModel);
         }
 
-        public IActionResult OnGetCreate()
-
+        public IActionResult OnGetCreate(CreateArticlesCategory commend)
         {
            
-            return Partial("./Create", command);
+            return Partial("./Create", commend);
         }
 
         public JsonResult OnPostCreate(CreateArticlesCategory commend)

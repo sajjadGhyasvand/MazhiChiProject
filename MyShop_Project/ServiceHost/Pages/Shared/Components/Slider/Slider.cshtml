@@ -1,8 +1,10 @@
-﻿@model My_ShopQuery.Contract.Slider.SliderQueryModel
+﻿@using My_ShopQuery.Contract.Slide
+@* @model My_ShopQuery.Contract.Slider.SliderQueryModel *@
+@model List<SlideQueryModel>
 
 <div class="home-banner-two">
     <div class="home-slides owl-carousel owl-theme">
-        @foreach (var item  in Model.SlideQueryModels)
+        @foreach (var item  in Model)
         {
             <div class="home-item item-bg1">
                 <div class="d-table">

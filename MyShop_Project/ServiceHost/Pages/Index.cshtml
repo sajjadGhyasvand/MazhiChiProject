@@ -3,9 +3,8 @@
 @using My_ShopQuery.Contract.GeneralSetting
 @model IndexModel
 @inject IGeneralSettingQueryModel GeneralSetting
-@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = Localizer["Title"];
+    ViewData["Title"] = "صفحه اصلی ";
 }
 @* @{
     var general = GeneralSetting.GeneralSettingQueryModel();
@@ -24,9 +23,7 @@
 @await Component.InvokeAsync("LatestArticles")*@
 
 @await Component.InvokeAsync("Slider")
-@await Component.InvokeAsync("TimeLine")
 @await Component.InvokeAsync("AboutUs")
-@await Component.InvokeAsync("WhyChoose")
 @await Component.InvokeAsync("Categories")
 @await Component.InvokeAsync("LatestProduct")
 <!-- Start Video Section -->
